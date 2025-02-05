@@ -1,0 +1,104 @@
+﻿@model Bankmngsys.Models.Entities.AddCustomers
+
+<div class="container-fluid d-flex justify-content-center" style="background-color: #e0f2f1; padding-top: 40px;">
+    <div class="text-center mb-4">
+        <h1 class="text-teal">Add Customer</h1>
+        <p class="text-muted">Please fill in the details below to add a new customer.</p>
+    </div>
+    <div class="form-container mx-auto p-4 rounded shadow"
+         style="max-width: 600px; background-color: #ffffff;">
+        <form method="post">
+            <div class="mb-3">
+                <label for="FirstName" class="form-label">Please Enter First Name:</label>
+                <input type="text" class="form-control" id="FirstName"
+                       asp-for="FirstName" placeholder="Enter first name" />
+            </div>
+            <div class="mb-3">
+                <label for="LastName" class="form-label">Please Enter Last Name:</label>
+                <input type="text" class="form-control" id="LastName"
+                       asp-for="LastName" placeholder="Enter last name" />
+            </div>
+            <div class="mb-3">
+                <label for="Email" class="form-label">Please Enter Email:</label>
+                <input type="email" class="form-control" id="Email"
+                       asp-for="Email" placeholder="Enter email address" />
+            </div>
+            <div class="mb-3">
+                <label for="Phone" class="form-label">Please Enter Phone Number:</label>
+                <input type="text" class="form-control" id="Phone"
+                       asp-for="Phone" placeholder="Enter phone number" />
+            </div>
+            <div class="d-grid gap-2">
+                <input type="submit" class="btn btn-teal btn-lg" value="Save" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #f1f8f6;
+        font-family: Arial, sans-serif;
+        color: #495057;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .form-container {
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+    }
+
+    .form-label {
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        border: 1px solid #ced4da;
+        border-radius: 8px;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            border-color: #80bdff;
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+    .btn-teal {
+        background-color: #00796b;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.2rem;
+    }
+
+        .btn-teal:hover {
+            background-color: #004d40;
+        }
+
+    .text-teal {
+        color: #00796b !important;
+    }
+
+    .text-muted {
+        color: #6c757d !important;
+    }
+
+    /* Removing full vertical centering */
+    .container-fluid {
+        display: flex;
+        justify-content: center;
+        padding-top: 40px; /* Added padding to push the form down */
+    }
+</style>
